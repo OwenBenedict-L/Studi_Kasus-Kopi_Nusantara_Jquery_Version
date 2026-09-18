@@ -272,6 +272,7 @@ html {
 #kontak {
     margin: 20px 10px;
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     border: solid;
     color: #3d2607;
@@ -280,15 +281,18 @@ html {
 
 .kontak-img {
     flex: 0.4;
+    min-width: 0;
 }
 
 .kontak-info {
     flex: 0.6;
     background-color: #dacfb8;
-    padding: 40px;    
+    padding: 40px 25px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
     text-align: left;
 }
 
@@ -357,7 +361,7 @@ html {
 #keperluan {
     width: 100%;
     max-width: 400px;
-    padding: 10px 12px;
+    padding: 10px 14px 28px 14px;
     font-size: 10px;
     height: 120px;
     border: 1px solid #777;
@@ -373,7 +377,7 @@ html {
     width: 100%;
 }
 
-.char_count {
+#char_count {
     position: absolute;
     bottom: 8px;
     right: 14px;
@@ -415,7 +419,7 @@ html {
   padding: 16px 22px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  display: none; /* Sembunyi secara default */
+  display: none;
   overflow: hidden;
   z-index: 9999;
 }
@@ -636,5 +640,22 @@ footer {
     /* footer */
     footer {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #kontak {
+        flex-direction: column;
+    }
+
+    .kontak-img,
+    .kontak-info {
+        width: 100%;
+        flex: none;
+    }
+
+    .kontak-info {
+        border-left: none;
+        border-top: 2px solid #000000;
     }
 }
