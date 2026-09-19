@@ -24,7 +24,7 @@
         <div class="right-menu">
             <ul class="right-menu-show">
                 <li><a href="#" id="searching"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#" id="shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="#"><i class="fas fa-bars fa-2x"></i></a></li>
             </ul>
 
@@ -33,6 +33,22 @@
             </div>
         </div>
     </nav>
+
+    <div class="shopping-cart-button">
+        <h3>Keranjang Saya</h3>
+
+        <div class="content-cart">
+            <p class="message-cart">Tidak ada barang yang dibeli...</p>
+        </div>
+
+        <div class="info-cart">
+            <div class="total-cart">
+                <p class="content-total-cart">Total: <span id="price">Rp 0</span></p>
+            </div>
+
+            <button type="button" class="submit-cart" id="submit-cart">Beli</button>
+        </div>
+    </div>
 
     <main>
         <!-- hero banner -->
@@ -52,49 +68,49 @@
                     <img src="img/kopi/tubrukjawa.png" alt="Kopi Tubruk Jawa">
                     <h3>Kopi Tubruk Jawa</h3>
                     <p>Kopi hitam ala tradisional, diseduh kasar dengan gula batu secukupnya.</p>
-                    <span class="menu-price">Rp 15.000</span>
+                    <button type="button" class="menu-price">Rp 15.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/lampungrobusta.png" alt="Kopi Lampung Robusta">
                     <h3>Robusta Lampung</h3>
                     <p>Karakter kuat dan pahit tegas, favorit yang butuh dorongan energi ekstra.</p>
-                    <span class="menu-price">Rp 18.000</span>
+                    <button type="button" class="menu-price">Rp 18.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/floresbajawa.png" alt="Kopi Flores Bajawa">
                     <h3>Flores Bajawa</h3>
                     <p>Manis alami dengan sentuhan cokelat, tumbuh di lereng Gunung Inerie.</p>
-                    <span class="menu-price">Rp 23.000</span>
+                    <button type="button" class="menu-price">Rp 23.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/susugulaaren.png" alt="Kopi Susu Gula Aren">
                     <h3>Kopi Susu Gula Aren</h3>
                     <p>Espresso lokal, susu segar, dan gula aren asli. manis pas.</p>
-                    <span class="menu-price">Rp 19.000</span>
+                    <button type="button" class="menu-price">Rp 19.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/sulawesi.png" alt="Kopi Kalosi Sulawesi">
                     <h3>Kalosi Sulawesi</h3>
                     <p>Full body dengan after taste rempah, cocok diseduh French press.</p>
-                    <span class="menu-price">Rp 24.000</span>
+                    <button type="button" class="menu-price">Rp 24.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/vietnamdrip.png" alt="Kopi Vietnam Drip">
                     <h3>Vietnam Drip</h3>
                     <p>Kopi pekat menetes pelan, disajikan dengan susu kental manis dingin.</p>
-                    <span class="menu-price">Rp 20.000</span>
+                    <button type="button" class="menu-price">Rp 20.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/americanodingin.png" alt="Kopi Americano Dingin">
                     <h3>Americano Dingin</h3>
                     <p>Espresso ganda diseduh dengan air dingin, ringan tapi tetap nendang.</p>
-                    <span class="menu-price">Rp 18.000</span>
+                    <button type="button" class="menu-price">Rp 18.000</button>
                 </div>
                 <div class="menu-card">
                     <img src="img/kopi/lattepandan.png" alt="Kopi Latte Pandan">
                     <h3>Latte Pandan</h3>
                     <p>Sentuhan pandan lokal berpadu dengan susu creamy dan espresso lembut.</p>
-                    <span class="menu-price">Rp 21.000</span>
+                    <button type="button" class="menu-price">Rp 21.000</button>
                 </div>
                 <div id="pesan-kosong">
                     Maaf, menu kopi yang Anda cari tidak ditemukan.
@@ -226,12 +242,8 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-        document.querySelector('.fas.fa-bars.fa-2x').addEventListener('click', () => 
-        document.querySelector('.left-menu-show').classList.toggle('show'));
-    </script>
-    <!-- Ini jangan lupa dihapus yak yang atas, tuker ke script -->
+
+    <div id="notif-container"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="script.js" defer></script>
