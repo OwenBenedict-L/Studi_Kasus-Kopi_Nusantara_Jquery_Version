@@ -335,6 +335,7 @@ html {
     border-radius: 12px;
     padding: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease
 }
 
 .menu-card img{
@@ -348,6 +349,10 @@ html {
     padding-top: 12px; 
     padding-bottom: 3px; 
     color: #693b22;
+}
+
+.menu-card:hover {
+    background-color: #e6d5b8;
 }
 
 .menu-price {
