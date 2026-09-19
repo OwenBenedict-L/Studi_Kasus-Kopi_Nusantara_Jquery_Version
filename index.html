@@ -96,6 +96,9 @@
                     <p>Sentuhan pandan lokal berpadu dengan susu creamy dan espresso lembut.</p>
                     <span class="menu-price">Rp 21.000</span>
                 </div>
+                <div id="pesan-kosong">
+                    Maaf, menu kopi yang Anda cari tidak ditemukan.
+                </div>
             </div>
         </section>
 
@@ -167,6 +170,49 @@
                 <p><strong>Alamat:</strong><a href="#"> Jl. Letjen S. Parman, Jakarta Barat</a></p>
             </div>
         </section>
+
+        <!-- faq -->
+        <section id="faq">
+            <div class="faq-img">
+                <img src="/img/faq.png" alt="faq">
+            </div>
+
+            <div class="faq-judul">
+                <h1>FAQ</h1>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <h3 class="faq-question">Kopi Nusantara itu tempat apa?</h3>
+            <div class="faq-answer">
+                Kopi Nusantara adalah kedai kopi yang berfokus menyajikan kopi <i>single origin</i> terbaik khas Indonesia. 
+                Kami menyangrai sendiri biji kopi segar setiap minggunya yang didapatkan langsung dari petani lokal
+            </div>
+
+            <h3 class="faq-question">Apakah ada batas jumlah tamu di waktu yang bersamaan?</h3>
+            <div class="faq-answer">
+                Ya, demi kenyamanan bersama, kapasitas maksimal di Kopi Nusantara saat ini dibatasi untuk 10 pengunjung 
+                dalam satu waktu.
+            </div>
+
+            <h3 class="faq-question">Bagaimana cara mengajukan kerja sama dengan Kopi Nusantara?</h3>
+            <div class="faq-answer">
+                Kami terbuka untuk berbagai bentuk kolaborasi yang sejalan dengan nilai dan arah pertumbuhan usaha. 
+                Untuk pengajuan kerjasama atau informasi lebih lanjut, silakan menghubungi kami melalui form yang tersedia 
+                dibagian kontak
+            </div>
+
+            <h3 class="faq-question">Apakah bisa memesan dengan menggunakan <i>tumbler</i> atau wadah sendiri?</h3>
+            <div class="faq-answer">
+                Tentu! Kopi Nusantara mendukung program <i>eco-friendly</i>. Anda diperbolehkan membawa <i>tumbler</i> 
+                atau wadah minum sendiri untuk setiap pesanan <i>takeaway</i> maupun <i>dine in</i>
+            </div>
+
+            <h3 class="faq-question">Apakah ada lowogan di Kopi Nusantara?</h3>
+            <div class="faq-answer">
+                Saat ini Kopi Nusantara belum membuka lowongan, tetapi Anda bisa mengirmkan CV anda melalui email 
+                ke <b>lowongan@kopinusantara.id</b>
+            </div>
+        </section>
     </main>
     
     <!-- footer -->
@@ -184,11 +230,6 @@
     <script>
         document.querySelector('.fas.fa-bars.fa-2x').addEventListener('click', () => 
         document.querySelector('.left-menu-show').classList.toggle('show'));
-
-        document.querySelector('#searching').addEventListener('click', (e) => {
-            e.preventDefault(); 
-            document.querySelector('.search-button').classList.toggle('active');
-        });
     </script>
     <!-- Ini jangan lupa dihapus yak yang atas, tuker ke script -->
 

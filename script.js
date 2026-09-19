@@ -1,3 +1,31 @@
+/* search button */
+$('#searching').on('click', function(e) {
+    e.preventDefault(); 
+    $('.search-button').toggleClass('active');
+    $('#search-box').focus();
+});
+
+$('#search-box').on('input', function() {
+    let kataKunci = $(this).val().toLowerCase();
+    let jumlahCocok = 0;
+        
+    $('.menu-card').each(function() {
+        let namaKopi = $(this).find('h3').text().toLowerCase();    
+        if (namaKopi.includes(kataKunci)) {
+            $(this).show();
+            jumlahCocok++;
+        } else {
+            $(this).hide(); 
+        }
+    });
+
+    if (jumlahCocok === 0) {
+        $('#pesan-kosong').show(); 
+    } else {
+        $('#pesan-kosong').hide(); 
+    }
+});
+
 // SCRIPT KONTAK
 $(document).ready(function() {
     const maxChars = 999;
@@ -38,4 +66,12 @@ $(document).ready(function() {
 
         $(this).trigger('reset');$('#char-count').text(`0/${maxChars}`);
     });
+});
+
+/* FAQ */
+$('.faq-question').on('click', function () {
+            $(this).next('.faq-answer').slideToggle();
+            $(this).toggleClass('open');
+            $('.faq-answer').not($(this).next()).slideUp();
+            $('.faq-question').not($(this)).removeClass('open');
 });
