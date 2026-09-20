@@ -18,6 +18,11 @@ $(document).ready(function(){
         }, 2500);
     }
 
+    $('.left-menu-show a').on('click', function() {
+        $('.left-menu-show a').removeClass('active');
+        $(this).addClass('active');
+    });
+
     $('#shopping-cart').on('click', (e) => {
         e.preventDefault();
         $('.shopping-cart-button').toggleClass('active');
