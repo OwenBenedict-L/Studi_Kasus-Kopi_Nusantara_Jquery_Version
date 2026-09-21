@@ -182,6 +182,7 @@ $(document).ready(function() {
         const $pesanError = $('#pesan-error');
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regexNama = /^[a-zA-Z\s]{4,16}$/;
 
         if (nama === '' || email === '' || keperluan === '') {
             $pesanError.text('Data anda tidak lengkap, silahkan isi berlebih dahulu!').show();
@@ -189,7 +190,12 @@ $(document).ready(function() {
         }
 
         if (!emailRegex.test(email)) {
-            $pesanError.text('Format email tidak valid! Harap masukkan format yang benar (contoh: nama@email.com).').show();
+            $pesanError.text('Format email tidak valid! Harap masukkan format yang benar. (contoh: nama@email.com)').show();
+            return;
+        }
+
+        if (!regexNama.test(nama)) {
+            $pesanError.text('Nama harus berupa huruf 4 - 16 karakter, dan tidak diperbolehkan mengandung karakter atau symbol unik!').show();
             return;
         }
 
